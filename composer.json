@@ -1,0 +1,20 @@
+{
+    "name": "demo/tagged-page",
+    "description": "This plugin add the ability for the page post type to add and manage Tags",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "Demo\\TaggedPage\\": "src/"
+        },
+        "files": [
+            "src/helpers/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Demo Demo",
+            "email": "demo@demo.demo"
+        }
+    ],
+    "require": {}
+}
