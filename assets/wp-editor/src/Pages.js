@@ -39,7 +39,7 @@ const Pages = () => {
         let res = await request(params)
         setLoading(false)
         if (res && res.success) {
-            setResults(res.payload)
+            setResults(res.payload.sort((a,b) => b.related - a.related))
         }
         else {
             setResults([])
@@ -53,10 +53,6 @@ const Pages = () => {
     useEffect(() => {
         startSearch()
     }, [Selected_tags])
-
-    useEffect(() => {
-        startSearch()
-    }, [])
 
     return (
         <>

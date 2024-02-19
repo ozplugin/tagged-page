@@ -127,8 +127,11 @@ class Base {
             $id        = (int) ( $args['more_like'] );
             $post_type = get_post_type($id);
             if ( 'page' == $post_type ) {
+                $args['orderby'] = '_score';
+                $args['order']   = 'DESC';
                 $related = get_post_meta($id, 'dd_related_posts', true);
                 if ( ! empty($related) ) {
+                    $args['more_like'] = '';
                     $args['post_type'] = 'page';
                     $args['post__in']  = get_post_meta($id, 'dd_related_posts', true);
                 }

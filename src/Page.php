@@ -69,7 +69,7 @@ class Page {
                 $id      = get_the_ID();
                 $pages[] = array(
                     'ID'      => $id,
-                    'name'    => get_the_title(),
+                    'name'    => html_entity_decode(get_the_title()),
                     'tags'    => Tags::instance()->get_tags_by_post_id($id, true),
                     'related' => $related && is_array($related) && in_array($id, $related, true),
                 );

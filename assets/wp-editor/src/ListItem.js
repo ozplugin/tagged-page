@@ -53,7 +53,7 @@ const ListItem = (props) => {
     return (
         <li className="dd-list__item" id={`dd-page-${item.ID}`}>
             <label htmlFor={`dd-page-${item.ID}__input`}>
-                <input onChange={onChange} type="checkbox" disabled={Loading} defaultChecked={IsRelated} name={`dd-page-${item.ID}`} id={`dd-page-${item.ID}__input`} />
+                <input key={item.ID} onChange={onChange} type="checkbox" disabled={Loading} defaultChecked={IsRelated} name={`dd-page-${item.ID}`} id={`dd-page-${item.ID}__input`} />
                 {item.name}
             </label>
             {item.tags && Object.keys(item.tags).length > 0 ?
