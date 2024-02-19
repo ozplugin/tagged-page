@@ -1,9 +1,5 @@
 # Tagged page
 
-> ElasticPress React is a library of React components to supercharge your headless WordPress website with ElasticPress.
-
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Release Version](https://img.shields.io/github/release/10up/elasticpress-react.svg)](https://github.com/10up/elasticpress-react/releases/latest) [![GPLv2 License](https://img.shields.io/github/license/10up/elasticpress-react.svg)](https://github.com/10up/elasticpress-react/blob/develop/LICENSE.md)
-
 ## Requirements
 
 * Wordpress > 6.2
