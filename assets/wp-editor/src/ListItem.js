@@ -43,13 +43,23 @@ const ListItem = (props) => {
             'post_id': postId,
             'related': item.ID
         }
-        setLoading(true)
-        let res = await request(params)
+        setLoading(true);
+
+        [...document.querySelectorAll('.dd-list__item input')].forEach((el) => {
+            el.disabled = true
+        })
+
+        let res = await request(params);
+
+        [...document.querySelectorAll('.dd-list__item input')].forEach((el) => {
+            el.disabled = false;
+        })
 
         // update related post ElasticPress widget
         updateRelatedBlocks()
         setLoading(false)
     }
+
     return (
         <li className="dd-list__item" id={`dd-page-${item.ID}`}>
             <label htmlFor={`dd-page-${item.ID}__input`}>
