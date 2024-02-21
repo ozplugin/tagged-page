@@ -9,6 +9,12 @@
 
 Download as archive and install as regular WordPress plugin
 
+or run this command in the plugins folder
+
+```bash
+  git clone https://github.com/ozplugin/tagged-page.git
+```
+
 ## How it works
 The plugin adds two new accordions - "Related Pages" and "Tags" - to the settings sidebar of the WordPress page editor
 

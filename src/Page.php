@@ -4,7 +4,7 @@
  * @author    Demo <demo@demo.demo>
  * @link      https://demo.com/
  * @copyright 2024 Demo
- * @ver 1.0.0
+ * @ver 1.0.1
  */
 
 namespace Demo\TaggedPage;
@@ -49,6 +49,7 @@ class Page {
         $tag_name = Tags::instance()->get_name();
         $args     = array(
             'post_type'      => 'page',
+            //'s' => 'search phrase', // works but if not empty
             'posts_per_page' => -1, // todo make pagination
             'ep_integrate'   => true, // elasticpress
             'post__not_in'   => array( $this->id ), // exclude current post
